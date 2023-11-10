@@ -15,3 +15,5 @@
 ## Передача файла через логин и пароль
 
 ## Результат
+Файл оказался на компьютере C.
+![Image alt](https://github.com/vendattor/Cloud_technologies/raw/master/lab_1/photo_2023-11-07_20-59-18.jpg)
