@@ -16,4 +16,5 @@
 
 ## Результат
 Файл оказался на компьютере C.
-![Image alt](https://github.com/vendattor/Cloud_technologies/raw/master/lab_1/photo_2023-11-07_20-59-18.jpg)
+![Image alt](https://github.com/vendattor/Cloud_technologies/raw/main/lab_1/photo_2023-11-07_20-59-18.jpg)
+<image src="/lab_1/photo_2023-11-07_20-59-18.jpg">
