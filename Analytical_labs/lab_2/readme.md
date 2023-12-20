@@ -34,7 +34,7 @@ Sentinel - это облачная платформа, которая предо
 
 Azure Analysis Services - Yandex Managed Service for ClickHouse 
 
-Azure Data Factory - Yandex Managed Data Factory 
+Azure Data Factory - Yandex Data Factory 
 
 Azure Database for PostgreSQL - Yandex Managed Service for PostgreSQL
 
