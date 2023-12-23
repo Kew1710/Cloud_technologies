@@ -17,11 +17,12 @@ jobs:
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t your-image-name .
+      run: docker build -t image-for-lab .
 
-    - name: Push Docker image to registry
-      run: docker push your-image-name
-
-    - name: Deploy to production
-      run: |
-        # Add your deployment steps here
+    - name: Run Docker Container
+      run: docker run --name container-for-lab image-for-lab
+      
+    - name: Copy File From Container
+      run: sudo docker cp ura:/build_output.txt ~/build_output.txt
+      
+        
