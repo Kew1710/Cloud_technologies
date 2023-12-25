@@ -1,6 +1,7 @@
 name: CI/CD with Docker
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -17,12 +18,22 @@ jobs:
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t image-for-lab .
+      run: docker build -t image-for-lab /lab_3
 
     - name: Run Docker Container
       run: docker run --name container-for-lab image-for-lab
       
     - name: Copy File From Container
-      run: sudo docker cp ura:/build_output.txt ~/build_output.txt
+      run: sudo docker cp container-for-lab:/build_output.txt ~/build_output.txt
+
+    - name: Push File To Repo
+      run: |
+        git config --global user.email "7500525@list.ru"
+        git config --global user.name "Taymurazzzz"
+        git add build_output.txt
+        git commit -m "Result of building image has been pushed on repo"
+        git push origin main
+      
+      
       
         
